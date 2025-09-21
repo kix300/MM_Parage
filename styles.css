@@ -1,0 +1,524 @@
+/* Reset et styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fafafa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #e0e0e0;
+    z-index: 1000;
+    padding: 1rem 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo h3 {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 1.2rem;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+    padding: 0.5rem 0;
+}
+
+.nav-link:hover {
+    color: #8B4513;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #333;
+    transition: 0.3s;
+}
+
+/* Hero Section */
+.hero {
+    margin-top: 80px;
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.hero-content {
+    text-align: left;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+}
+
+.hero-name {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #8B4513;
+    margin-bottom: 0.2rem;
+    line-height: 1;
+}
+
+.hero-surname {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    line-height: 1;
+}
+
+.hero-social {
+    font-size: 1.1rem;
+    color: #666;
+    letter-spacing: 3px;
+    font-weight: 300;
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-placeholder {
+    width: 300px;
+    height: 300px;
+    background: #8B4513;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 4rem;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* Bio Section */
+.bio {
+    padding: 6rem 0;
+    background: white;
+}
+
+.bio-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.bio-text blockquote {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: #444;
+    font-style: italic;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.bio-text blockquote::before {
+    content: '"';
+    font-size: 4rem;
+    color: #8B4513;
+    position: absolute;
+    left: 0;
+    top: -1rem;
+    font-family: serif;
+}
+
+.bio-text cite {
+    font-size: 1.1rem;
+    color: #8B4513;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.image-placeholder.small {
+    width: 120px;
+    height: 120px;
+    background: #f8f9fa;
+    border: 2px solid #8B4513;
+    border-radius: 10px;
+    font-size: 2rem;
+    color: #8B4513;
+}
+
+/* Guide Section */
+.guide-section {
+    padding: 6rem 0;
+    background: #f8f9fa;
+}
+
+.guide-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.guide-header h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.guide-header p {
+    margin-bottom: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.privacy-note {
+    font-size: 0.9rem;
+    color: #8B4513;
+    font-style: italic;
+}
+
+.guide-quote {
+    font-style: italic;
+    color: #444;
+    margin: 2rem 0;
+    font-size: 1.1rem;
+}
+
+.step-number {
+    font-size: 6rem;
+    color: #8B4513;
+    font-weight: 300;
+    opacity: 0.3;
+    display: block;
+    margin-top: 2rem;
+}
+
+.form-section h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.guide-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #333;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #8B4513;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 1rem;
+    background: #8B4513;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.submit-btn:hover {
+    background: #6d3510;
+}
+
+.delivery-note {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: #666;
+    font-style: italic;
+}
+
+/* Formation Section */
+.formation {
+    padding: 6rem 0;
+    background: white;
+}
+
+.formation-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.formation-header {
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.formation-header h2 {
+    font-size: 3rem;
+    color: #2c3e50;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.formation-description h3 {
+    font-size: 1.8rem;
+    color: #8B4513;
+    margin-bottom: 2rem;
+    font-style: italic;
+    line-height: 1.4;
+}
+
+.formation-description p {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.formation-subtitle {
+    font-style: italic;
+    color: #8B4513;
+    font-weight: 500;
+}
+
+/* Portfolio Section */
+.portfolio {
+    padding: 6rem 0;
+    background: #f8f9fa;
+}
+
+.portfolio-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.portfolio-header h2 {
+    font-size: 3rem;
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.portfolio-item {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+}
+
+.portfolio-item .image-placeholder {
+    width: 100%;
+    height: 250px;
+    background: #8B4513;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    border-radius: 0;
+}
+
+.portfolio-item .image-placeholder p {
+    margin-top: 1rem;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* Footer */
+.footer {
+    background: #2c3e50;
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #8B4513;
+}
+
+.footer-links span {
+    color: #8B4513;
+}
+
+.footer-note p {
+    color: #bbb;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+    
+    .nav-menu {
+        display: none;
+    }
+    
+    .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-name,
+    .hero-surname {
+        font-size: 3rem;
+    }
+    
+    .bio-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .guide-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .formation-header h2 {
+        font-size: 2rem;
+    }
+    
+    .portfolio-header h2 {
+        font-size: 2rem;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .image-placeholder {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .step-number {
+        font-size: 4rem;
+    }
+}
